@@ -22,13 +22,14 @@ def search_kob(
     start_year,
     end_year,
     stat_code,
+    period="A",
     item_code1="",
     item_code2="",
     item_code3="",
     item_code4="",
 ):
     API_KEY = os.getenv("HJH_BOK_OPENAPI_KEY")
-    url = f"https://ecos.bok.or.kr/api/StatisticSearch/{API_KEY}/json/kr/1/10000/{stat_code}/A/{start_year}/{end_year}/{item_code1}/{item_code2}/{item_code3}/{item_code4}"
+    url = f"https://ecos.bok.or.kr/api/StatisticSearch/{API_KEY}/json/kr/1/10000/{stat_code}/{period}/{start_year}/{end_year}/{item_code1}/{item_code2}/{item_code3}/{item_code4}"
     response = requests.get(url)
     try:
         content = response.text
