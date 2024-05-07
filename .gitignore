@@ -1,0 +1,11 @@
+*.csv
+*.xlsx
+*.xls
+__pycache__/
+kaggle/
+*.pdf
+*.txt
+.env
+upstage_eda_1/
+kobank.ipynb
+kaggle_eda.ipynb
